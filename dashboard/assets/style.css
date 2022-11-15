@@ -1,0 +1,112 @@
+/* references:
+- https://towardsdatascience.com/dash101-part-2-prettify-dash-dashboard-with-css-and-python-3866c069a3b6
+*/
+
+/* This creates a skinny side bar fixed to the left of the page */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    padding: 2rem 1rem;
+    background-color: #B9D9EB;
+    z-index: 1050;
+    transition: width 0.1s ease-in-out;
+  }
+  
+  /* changes color of h2 items, in this case the sidebar text */
+  /* h2 { */
+    /* color:#753918; */
+    /* font-family: ui-monospace; */
+  /* }  */
+  
+  /* changes color of Span items, in this case the text of the different options in the sidebar */
+  /* Span {
+    color:#ffffff;
+  }  */
+  
+  /* Change color of items */
+  /* I {
+    color:#ffffff;
+  }  */
+  
+  /* changes both the color of the icon and the background color of selected icon */
+  .sidebar .nav-link.active {
+    color: #291b13;
+    background-color: #5791b3;
+  }
+  
+  /* when the user hovers on the sidebar, expand it */
+  .sidebar:hover {
+    width: 16rem;
+  }
+  
+  /* make sure the contents of the navlink don't wrap when navbar collapses. It also changes the color of the icons and the text when not selected */
+  .sidebar .nav-link {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #231F20;
+  }
+  
+  /* fix the width of the icons */
+  .sidebar .nav-link i {
+    width: 1rem;
+  }
+  
+  /* hide the navlink labels by default */
+  .sidebar .nav-link span {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+  /* when the sidebar is hovered, reveal the labels */
+  .sidebar:hover .nav-link span {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* container for the sidebar header. make sure the contents don't wrap when
+   * the sidebar is collapsed.
+   */
+  .sidebar-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* position the header relative to the logo and hide by default */
+  .sidebar-header h2 {
+    opacity: 0;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+  /* reveal the header when the sidebar is toggled */
+  .sidebar:hover .sidebar-header h2 {
+    opacity: 1;
+  }
+  
+  /* position the content relative to the collapsed sidebar */
+  .content {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    padding: 2rem 1rem;
+    /*background-color: #bebebe;*/
+  }
+
+  /********************* DROPDOWNS *********************/
+  /* changes the colour of the period dropdown hover colors */
+  #dpdn .VirtualizedSelectFocusedOption {
+    background-color: #753918;
+    color: white;
+  }
+
+  /* #yr_dpdn .Select-menu-outer{
+    background-color: rgb(174, 27, 27);
+  } */
